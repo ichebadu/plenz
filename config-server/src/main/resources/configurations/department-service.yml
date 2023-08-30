@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/department_db
+    username: root
+    password: 12345678
+
+  application:
+    name: department-service
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+# ziking config, to publish all data
+management:
+  tracing:
+    sampling:
+      probability: 1.0
